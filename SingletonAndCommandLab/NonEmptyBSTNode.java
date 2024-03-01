@@ -23,7 +23,16 @@ public class NonEmptyBSTNode implements BSTNode {
 	 */
 	public int getCount(String word) {
 		// Fill in the code according to the description above. 
-		return 0;
+		if(this.word.equals(word)){
+			return this.count;
+		} else if (this.word.compareTo(word) < 0){ // compareTo returns negative if 
+			 		// this.word < word
+			return right.getCount(word);
+		} else if (this.word.compareTo(word) < 0){ // compareTo returns negative if 
+			// this.word < word
+   return right.getCount(word);
+		}
+		return count;
 	}
 	
 	public String getWord() {
@@ -51,6 +60,7 @@ public class NonEmptyBSTNode implements BSTNode {
 	 */
 	public void addWordLeft(String word) {
 		// fill in the code according to the description
+		this.left = new NonEmptyBSTNode(word);
 	}
 
 	@Override
@@ -60,6 +70,7 @@ public class NonEmptyBSTNode implements BSTNode {
 	 */
 	public void addWordRight(String word) {
 		// fill in the code according to the description
+		this.right = new NonEmptyBSTNode(word);
 	}
 
 	@Override
