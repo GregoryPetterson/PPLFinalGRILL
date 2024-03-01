@@ -16,6 +16,7 @@ public class WeatherStation {
 		// When humidity is >= 90, bring the umbrella! 
 		//Observer needUmbrella = (......)-> {if ..... System.out.println("Bring an umbrella!");};
 		//weatherData.registerObserver(needUmbrella);
+
 		
 		// Q4: 
 		// Create and register another observer that detects some other 

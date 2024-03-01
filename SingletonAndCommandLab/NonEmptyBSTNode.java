@@ -22,18 +22,19 @@ public class NonEmptyBSTNode implements BSTNode {
 	 * for an empty node: it will automatically return a correct count. 
 	 */
 	public int getCount(String word) {
-		// Fill in the code according to the description above. 
 		if(this.word.equals(word)){
 			return this.count;
-		} else if (this.word.compareTo(word) < 0){ // compareTo returns negative if 
-			 		// this.word < word
+		} else if (this.word.compareTo(word) < 0){ // compareTo returns negative if this.word < word
 			return right.getCount(word);
-		} else if (this.word.compareTo(word) < 0){ // compareTo returns negative if 
-			// this.word < word
-   return right.getCount(word);
+		} else {
+			return right.getCount(word); // this.word >= word search right.
 		}
-		return count;
+		
+		if (){}
 	}
+
+   		 
+	
 	
 	public String getWord() {
 		return word;
