@@ -1,18 +1,24 @@
 package Final;
 
+import java.util.*;
+
 public class ZooAdmin {
     public enum Exhibit {LION, TIGER, BEAR}
     public Exhibit exhibit;
     public boolean isClosed;
     public String event;
-    private List<zooClientObservers> observers;
+    public List<ExhibitStateObserver> observers;
 
     public ZooAdmin() {
         observers = new ArrayList<ExhibitStateObserver>();
     }
+
+    public void registerObserver(ExhibitStateObserver o) {
+        observers.add(o);
+    }
     
     public void notifyObservers() {
-        for (zooClientObservers observer : observers) {
+        for (ExhibitStateObserver observer : observers) {
             observer.update(exhibit, isClosed, event);
         }
     }
