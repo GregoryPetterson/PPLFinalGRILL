@@ -6,6 +6,8 @@ public class NonEmptyBSTNode implements BSTNode {
 	private BSTNode right= EmptyBSTNode.UNIQUE_INSTANCE;
 	
 	public NonEmptyBSTNode(String word) {
+		this.word = word;
+		this.count = 1;
 		// Fill in the constructor code. Note that the left and 
 		// the right references are already set to empty nodes
 	}
@@ -22,20 +24,14 @@ public class NonEmptyBSTNode implements BSTNode {
 	 * for an empty node: it will automatically return a correct count. 
 	 */
 	public int getCount(String word) {
-		if(this.word.equals(word)){
+		if(this.count == 0 || this.word.equals(word)){
 			return this.count;
 		} else if (this.word.compareTo(word) < 0){ // compareTo returns negative if this.word < word
 			return right.getCount(word);
-		} else {
-			return right.getCount(word); // this.word >= word search right.
-		}
-		
-		if (){}
+		} else 
+			return left.getCount(word); // this.word >= word, search left.
 	}
 
-   		 
-	
-	
 	public String getWord() {
 		return word;
 	}
