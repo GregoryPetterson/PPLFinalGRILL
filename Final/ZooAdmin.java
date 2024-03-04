@@ -8,7 +8,7 @@ public class ZooAdmin {
     private List<zooClientObservers> observers;
 
     public ZooAdmin() {
-        observers = new 
+        observers = new ArrayList<ExhibitStateObserver>();
     }
     
     public void notifyObservers() {
