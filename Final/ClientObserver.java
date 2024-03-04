@@ -15,6 +15,19 @@ public class ClientObserver implements ExhibitStateObserver {
     }
 
     public void update(Exhibit exhibit, boolean isClosed, String event) {
-        System.out.println("Exhibit: " + exhibit + " is closed: " + isClosed + " Event: " + event);
+        this.exhibit = exhibit;
+        this.isClosed = isClosed;
+        this.event = event;
+        display();
+    }
+
+    public void display() {
+        String isClosedString; 
+        if (isClosed) {
+            isClosedString = "Exhibit is closed";
+        } else {
+            isClosedString = "Exhibit is open";
+        }
+        System.out.println("Exhibit: " + exhibit + "\n" + isClosedString + "\n" + "Event: " + event);
     }
 }
