@@ -10,6 +10,12 @@ public class Zoo {
         path.addExhibit(ZooAdmin.Exhibit.TIGER);
         path.addExhibit(ZooAdmin.Exhibit.BEAR);
         zooAdmin.setExhibitState(ZooAdmin.Exhibit.LION, false, "Lion feeding");
+
+        zooAdmin.notifyObservers();
+
+        System.out.println("\n\n");
+        
+        clientObserver.display();
     
     }
     

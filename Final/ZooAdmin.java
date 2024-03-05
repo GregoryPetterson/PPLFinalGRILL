@@ -6,7 +6,8 @@ public class ZooAdmin {
     public enum Exhibit {LION, TIGER, BEAR}
     public Exhibit exhibit;
     public boolean isClosed;
-    public String event;
+    public boolean feeding;
+
     public List<ExhibitStateObserver> observers;
 
     public ZooAdmin() {
