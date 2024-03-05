@@ -3,7 +3,8 @@ package Final;
 import java.util.*;
 
 public class ZooAdmin {
-    public enum Exhibit {LION, TIGER, BEAR}
+    public enum EnumExhibit {LION, TIGER, BEAR}
+    public enum EnumDec  {FEEDING, SHOW, CLOSED}
     public Exhibit exhibit;
     public boolean isClosed;
     public boolean feeding;

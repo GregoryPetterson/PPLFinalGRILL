@@ -1,10 +1,12 @@
 package Final;
 
-import Final.ZooAdmin.Exhibit;
+import Final.ZooAdmin.EnumExhibit;
+import Final.ZooAdmin.EnumDec;
 import Final.ExhibitStateObserver;
+import java.util.ArrayList;
 
 public class ClientObserver implements ExhibitStateObserver {
-    
+
     public Exhibit exhibit;
     public boolean isClosed;
     public String event;
@@ -23,7 +25,7 @@ public class ClientObserver implements ExhibitStateObserver {
     }
 
     public void display() {
-        String isClosedString; 
+        String isClosedString;
         if (isClosed) {
             isClosedString = "Exhibit is closed";
         } else {
@@ -32,32 +34,36 @@ public class ClientObserver implements ExhibitStateObserver {
         System.out.println("Exhibit: " + exhibit + "\n" + isClosedString + "\n" + "Event: " + event);
     }
 
-    public void exhibitFactoryDecorator() {
-        // initialize undecoratedExhibit
-        Exhibit undecoratedExhibit;
+    public void exhibitFactoryDecorator(EnumExhibit exhibit, ArrayList<EnumDec> decorators) {
+        // initialize decorator
+        Exhibit decorator;
 
         // create exhibit based on exhibit type
-        if (exhibit == Exhibit.LION) {
-            undecoratedExhibit = new Lion();
-        } else if (exhibit == Exhibit.TIGER) {
-            undecoratedExhibit = new Tiger();
-        } else if (exhibit == Exhibit.BEAR) {
-            undecoratedExhibit = new Bear();
+        if (exhibit == EnumExhibit.LION) {
+            decorator = new Lion();
+        } else if (exhibit == EnumExhibit.TIGER) {
+            decorator = new Tiger();
+        } else if (exhibit == EnumExhibit.BEAR) {
+            decorator = new Bear();
+        }
 
-        // open or close the exhibit based on isClosed
-        if (isClosed) {
-            undecoratedExhibit = new ClosedExhibit(undecoratedExhibit);
-        } else {
-            undecoratedExhibit = new OpenExhibit(undecoratedExhibit);
-        }
-        
-        // decorate with event based on event variable 
-        if (event = "Feeding") {
-            undecoratedExhibit = new FeedingEvent(undecoratedExhibit);
-        }
-        if (event = "Cleaning") {
-            undecoratedExhibit = new CleaningEvent(undecoratedExhibit);
+        for (EnumDec dec : decorators) {
+
+            // open or close the exhibit based on isClosed
+            if (dec == EnumDec.CLOSED) {
+                decorator = new ClosedExhibit(decorator);
+            } else {
+                if (dec == EnumDec.FEEDING) {
+                    decorator = new FeedingEvent(decorator);
+                }
+                if (dec == EnumDec.SHOW) {
+                    decorator = new CleaningEvent(decorator);
+                }
+            }
+
+            // decorate with event based on event variable
+
+
         }
     }
-}
 }
