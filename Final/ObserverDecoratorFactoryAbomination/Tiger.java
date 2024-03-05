@@ -1,4 +1,4 @@
-package Final;
+package Final.ObserverDecoratorFactoryAbomination;
 
 public class Tiger extends Exhibit {
     

@@ -1,11 +1,11 @@
-package Final;
+package Final.ObserverDecoratorFactoryAbomination;
 
-import Final.ZooAdmin.EnumExhibit;
-import Final.ZooAdmin.EnumDec;
-import Final.ExhibitStateObserver;
 import java.util.ArrayList;
 
-public class ClientObserver implements ExhibitStateObserver {
+import Final.ObserverDecoratorFactoryAbomination.ZooAdmin.EnumDec;
+import Final.ObserverDecoratorFactoryAbomination.ZooAdmin.EnumExhibit;
+
+public class ClientObserver {
 
     public Exhibit exhibit;
     public boolean isClosed;

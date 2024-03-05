@@ -1,4 +1,4 @@
-package Final;
+package Final.ObserverDecoratorFactoryAbomination;
 
 public abstract class Exhibit {
     String description = "Unknown Exhibit";
