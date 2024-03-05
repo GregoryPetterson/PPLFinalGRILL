@@ -16,3 +16,5 @@ and the schedule will be updated and reprinted.
 If we have time, we should pass time into the constructor of each
 Exhibit event. If we're sadists we could implement a sort of the linked list
 based on time.
+
+Each decorator should have a get description

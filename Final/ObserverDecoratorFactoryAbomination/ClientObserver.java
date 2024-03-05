@@ -24,21 +24,13 @@ public class ClientObserver {
         display();
     }
 
-    public void display() {
-        String isClosedString;
-        if (isClosed) {
-            isClosedString = "Exhibit is closed";
-        } else {
-            isClosedString = "Exhibit is open";
-        }
-        System.out.println("Exhibit: " + exhibit + "\n" + isClosedString + "\n" + "Event: " + event);
-    }
+
 
     public void exhibitFactoryDecorator(EnumExhibit exhibit, ArrayList<EnumDec> decorators) {
         // initialize decorator
         Exhibit decorator;
 
-        // create exhibit based on exhibit type
+        // Create exhibit based on one of the exhibits a client subscribed to.
         if (exhibit == EnumExhibit.LION) {
             decorator = new Lion();
         } else if (exhibit == EnumExhibit.TIGER) {
@@ -46,6 +38,8 @@ public class ClientObserver {
         } else if (exhibit == EnumExhibit.BEAR) {
             decorator = new Bear();
         }
+
+        // Decorate it accordingly based on what zooAdmin notified us about events.
 
         for (EnumDec dec : decorators) {
 
