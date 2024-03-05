@@ -1,18 +1,63 @@
 {
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
     "configurations": [
         {
             "type": "java",
-            "name": "Launch Current File",
+            "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
         },
-
         {
             "type": "java",
-            "name": "WeatherStation",
+            "name": "Encryption",
             "request": "launch",
-            "mainClass": "WeatherStation",
-            "projectName": "PPLFinalGRILL_c221dd22"
+            "mainClass": "Encryption",
+            "projectName": "Lab4-singleton_f44a4764"
+        },
+        {
+            "type": "java",
+            "name": "ReflectionExamples",
+            "request": "launch",
+            "mainClass": "ReflectionExamples",
+            "projectName": "Lab4-singleton_f44a4764"
+        },
+        {
+            "type": "java",
+            "name": "TestBST",
+            "request": "launch",
+            "mainClass": "TestBST",
+            "projectName": "Lab4-singleton_f44a4764"
+        },
+        {
+            "type": "java",
+            "name": "TestPoints",
+            "request": "launch",
+            "mainClass": "TestPoints",
+            "projectName": "Lab4-singleton_f44a4764"
+        },
+        {
+            "type": "java",
+            "name": "TestRectangleSquare",
+            "request": "launch",
+            "mainClass": "TestRectangleSquare",
+            "projectName": "Lab4-singleton_f44a4764"
+        },
+        {
+            "type": "java",
+            "name": "UsingLambdas",
+            "request": "launch",
+            "mainClass": "UsingLambdas",
+            "projectName": "Lab4-singleton_f44a4764"
+        },
+        {
+            "type": "java",
+            "name": "VehicleExample",
+            "request": "launch",
+            "mainClass": "VehicleExample",
+            "projectName": "Lab4-singleton_f44a4764"
         }
     ]
 }
