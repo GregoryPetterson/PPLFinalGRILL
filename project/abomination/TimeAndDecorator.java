@@ -3,11 +3,12 @@ package project.abomination;
 import project.abomination.Scheduler.EnumDecorator;
 import java.time.LocalTime;
 
-public class EventTime {
+// This class associates times with decorators.
+public class TimeAndDecorator {
     EnumDecorator decorator;
     LocalTime time;
 
-    EventTime(EnumDecorator decorator, LocalTime time) {
+    TimeAndDecorator(EnumDecorator decorator, LocalTime time) {
         this.decorator = decorator;
         this.time = time;
     }

@@ -6,7 +6,7 @@ public class Scheduler {
 
     protected FactoryDecorator factory;
     private Events events;
-    public enum EnumDecorator {FEEDING, OPEN, PETTING, CLOSED}
+    public enum EnumDecorator {FEEDING, TRAINING, OPEN, PETTING, CLOSED}
 
     public Scheduler(Events events){
       Lion.getInstance();

@@ -9,6 +9,13 @@
             "name": "Zoo",
             "request": "launch",
             "mainClass": "project.abomination.Zoo",
+            "projectName": "PPLFinalGRILL-1_43e8533"
+        },
+        {
+            "type": "java",
+            "name": "Zoo",
+            "request": "launch",
+            "mainClass": "project.abomination.Zoo",
             "projectName": "PPLFinalGRILL_c221dd22"
         },
         {
