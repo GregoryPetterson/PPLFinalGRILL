@@ -1,11 +1,11 @@
 package project.abomination;
 
 public class Bear extends Exhibit {
-    private static final Bear BEAR = new Bear();
+     static Bear BEAR = new Bear();
     
     private Bear() {
         description = "********************Bear Exhibit Schedule******************";
-        
+        this.exhibit = null;
     }
 
     public static Bear getInstance() {

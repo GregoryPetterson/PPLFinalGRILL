@@ -5,6 +5,7 @@ public class Tiger extends Exhibit {
     
     private Tiger() {
         description = "********************Tiger Exhibit Schedule******************";
+        this.exhibit = null;
         
     }
 

@@ -9,7 +9,8 @@ public class PettingEvent extends ExhibitDecorator {
     }
 
     public String getDescription() {
-        return "Petting Event at " + time;
+        System.out.println("Petting Event at " + time);
+        return exhibit.getDescription() + "Petting Event at " + time;
     }
     
 }

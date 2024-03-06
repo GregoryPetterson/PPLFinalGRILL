@@ -5,7 +5,7 @@ public class Lion extends Exhibit {
     
     private Lion() {
         description = "********************Lion Exhibit Schedule******************";
-        
+        this.exhibit = null;
     }
 
     public static Lion getInstance() {
