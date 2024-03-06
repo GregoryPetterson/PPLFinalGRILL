@@ -1,8 +1,14 @@
 package project.abomination;
 
 public class Bear extends Exhibit {
-        public Bear() {
-        description = "Tiger";
+    private static final Bear BEAR = new Bear();
+    
+    private Bear() {
+        description = "Bear";
+        
     }
 
+    public static Bear getInstance() {
+        return BEAR;
+    }
 }

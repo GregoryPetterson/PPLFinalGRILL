@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "StarbuzzCoffee",
+            "request": "launch",
+            "mainClass": "headfirst.designpatterns.decorator.starbuzzWithSizesUpdated.StarbuzzCoffee",
+            "projectName": "PPLFinalGRILL_c221dd22"
+        },
+        {
+            "type": "java",
+            "name": "WeatherStationHeatIndex",
+            "request": "launch",
+            "mainClass": "headfirst.designpatterns.observer.weather.WeatherStationHeatIndex",
+            "projectName": "PPLFinalGRILL_c221dd22"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
