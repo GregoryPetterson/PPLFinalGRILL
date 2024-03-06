@@ -36,9 +36,6 @@ public class Zoo {
         // They'll get the schedule based on what was originally set.
 
         // Change the schedule here and then reprint the schedule for each observer.
-
-
-        zooAdmin.notifyObservers();
     
     }
     
