@@ -2,52 +2,52 @@ package project.abomination;
 
 import project.abomination.Scheduler.EnumDecorator;
 import java.util.ArrayList;
-import java.time.LocalTime; 
+import java.time.LocalTime;
 
 public class Zoo {
-    public static void main(String[] args) {      
+    public static void main(String[] args) {
 
-
-        ArrayList<Events> lionEvents = new ArrayList<Events>(); 
         Exhibit lion = Lion.getInstance();
-        lionEvents.add(new Events(lion, EnumDecorator.FEEDING, LocalTime.of(12, 0)));
-        lionEvents.add(new Events(lion, EnumDecorator.PETTING, LocalTime.of(14, 0)));
+        ArrayList<EventTime> lionEventTimes = new ArrayList<EventTime>();
+        lionEventTimes.add(new EventTime(EnumDecorator.FEEDING, LocalTime.of(12, 0)));
+        lionEventTimes.add(new EventTime(EnumDecorator.PETTING, LocalTime.of(14, 0)));
 
-        new Scheduler(lionEvents).notifyFactory();
+        Events lionEvents = new Events(lion, lionEventTimes);
 
-        ArrayList<Events> tigerEvents = new ArrayList<Events>(); 
-        Exhibit tiger = Tiger.getInstance(); 
-        tigerEvents.add(new Events(tiger, EnumDecorator.PETTING, LocalTime.of(11, 0)));
-        tigerEvents.add(new Events(tiger, EnumDecorator.CLOSED, LocalTime.of(15, 0)));
+        Exhibit lionSchedule = new Scheduler(lionEvents).notifyFactory();
 
-        new Scheduler(tigerEvents).notifyFactory();
-        
-        ArrayList<Events> bearEvents = new ArrayList<Events>();
-        Exhibit bear = Bear.getInstance(); 
+        Exhibit tiger = Tiger.getInstance();
+        ArrayList<EventTime> tigerEventTimes = new ArrayList<EventTime>();
+        tigerEventTimes.add(new EventTime(EnumDecorator.FEEDING, LocalTime.of(13, 0)));
+        tigerEventTimes.add(new EventTime(EnumDecorator.PETTING, LocalTime.of(15, 0)));
 
-        // Not actually wrapped?
-        bearEvents.add(new Events(bear, EnumDecorator.FEEDING, LocalTime.of(12, 0)));
-        bearEvents.add(new Events(bear, EnumDecorator.FEEDING, LocalTime.of(16, 0)));
-        bearEvents.add(new Events(bear, EnumDecorator.CLOSED, LocalTime.of(18, 0)));
+        Events tigerEvents = new Events(tiger, tigerEventTimes);
+
+        Exhibit tigerSchedule = new Scheduler(tigerEvents).notifyFactory();
+
+        Exhibit bear = Bear.getInstance();
+        ArrayList<EventTime> bearEventTimes = new ArrayList<EventTime>();
+        bearEventTimes.add(new EventTime(EnumDecorator.FEEDING, LocalTime.of(10, 0)));
+        bearEventTimes.add(new EventTime(EnumDecorator.PETTING, LocalTime.of(16, 0)));
+
+        Events bearEvents = new Events(bear, bearEventTimes);
+
+        Exhibit bearSchedule = new Scheduler(bearEvents).notifyFactory();
 
 
-        new Scheduler(bearEvents).notifyFactory();
-        
 
-        System.out.println(lion.getDescription());
+        System.out.println(lionSchedule.getDescription());
 
-        System.out.println(tiger.getDescription());
-        System.out.println(bear.getDescription());
+        System.out.println(tigerSchedule.getDescription());
+        System.out.println(bearSchedule.getDescription());
 
-        
         // Need to set what events are happening at each exhibit here.
-
 
         // Each observer knows what exhibit they're subscribed to.
         // They'll get the schedule based on what was originally set.
 
         // Change the schedule here and then reprint the schedule for each observer.
-    
+
     }
-    
+
 }

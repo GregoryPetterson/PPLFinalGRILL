@@ -5,10 +5,10 @@ import java.util.*;
 public class Scheduler {
 
     protected FactoryDecorator factory;
-    private ArrayList<Events> events;
+    private Events events;
     public enum EnumDecorator {FEEDING, OPEN, PETTING, CLOSED}
 
-    public Scheduler(ArrayList<Events> events){
+    public Scheduler(Events events){
       Lion.getInstance();
       Tiger.getInstance();
       Bear.getInstance();
@@ -23,8 +23,8 @@ public class Scheduler {
       // Each Event object knows what exhibit it's for.
     }
 
-    public  notifyFactory() {
-		factory.exhibitFactoryDecorator(events);
+    public  Exhibit notifyFactory() {
+		return factory.exhibitFactoryDecorator(events);
 	}
 
 

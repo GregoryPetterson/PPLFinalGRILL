@@ -6,22 +6,19 @@ import java.util.ArrayList;
 
 public class Events {
     Exhibit exhibit;
-    ArrayList<Event> events;
+    ArrayList<EventTime> eventTimes;
 
-    public Events(Exhibit exhibit, ArrayList<Event> events ) {
+    public Events(Exhibit exhibit, ArrayList<EventTime> eventTimes ) {
         this.exhibit = exhibit;
-        this.events = events;
+        this.eventTimes = eventTimes;
     }
 
-    public EnumDecorator getDecorator(){
-        return decorator;
-    }
-
-    public LocalTime getTime(){
-        return time;
-    }
 
     public Exhibit getExhibit(){
         return exhibit;
+    }
+
+    public ArrayList<EventTime> getEventTimes(){
+        return eventTimes;
     }
 }
