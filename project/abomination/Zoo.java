@@ -1,6 +1,8 @@
 package project.abomination;
 
 import project.abomination.Administration.EnumDec;
+import project.abomination.Administration.EnumDecorator;
+
 import java.util.ArrayList;
 import java.time.LocalTime; 
 
@@ -9,18 +11,20 @@ public class Zoo {
         // Create a zoo admin so we can notify observers when events are cancelled
         // or removed.
         ArrayList<Event> lionEvents = new ArrayList<Event>(); 
-
-        lionEvents.add(new Event(EnumDec.FEEDING, LocalTime.of(12, 0)));
-        lionEvents.add(new Event(EnumDec.SHOW, LocalTime.of(14, 0)));
+        Exhibit lion = Lion.getInstance();
+        ArrayList<EnumDecorator> decoratorsLion = newArra
+        lionEvents.add(new Event(lion, EnumDecorator.FEEDING, LocalTime.of(12, 0)));
+        lionEvents.add(new Event(lion, EnumDecorator.SHOW, LocalTime.of(14, 0)));
 
         ArrayList<Event> tigerEvents = new ArrayList<Event>(); 
-        tigerEvents.add(new Event(EnumDec.SHOW, LocalTime.of(11, 0)));
-        tigerEvents.add(new Event(EnumDec.CLOSED, LocalTime.of(15, 0)));
+        Exhibit tiger = Tiger.getInstance(); 
+        tigerEvents.add(new Event(tiger, EnumDecorator.SHOW, LocalTime.of(11, 0)));
+        tigerEvents.add(new Event(tiger, EnumDecorator.CLOSED, LocalTime.of(15, 0)));
         
         ArrayList<Event> bearEvents = new ArrayList<Event>(); 
-        bearEvents.add(new Event(EnumDec.FEEDING, LocalTime.of(12, 0)));
-        bearEvents.add(new Event(EnumDec.FEEDING, LocalTime.of(16, 0)));
-        bearEvents.add(new Event(EnumDec.CLOSED, LocalTime.of(18, 0)));
+        bearEvents.add(new Event(bear, EnumDecorator.FEEDING, LocalTime.of(12, 0)));
+        bearEvents.add(new Event(bear, EnumDecorator.FEEDING, LocalTime.of(16, 0)));
+        bearEvents.add(new Event(bear, EnumDecorator.CLOSED, LocalTime.of(18, 0)));
 
 
         Administration zooAdmin = new Administration();

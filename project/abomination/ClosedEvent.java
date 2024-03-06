@@ -8,6 +8,6 @@ public class ClosedEvent extends ExhibitDecorator {
     }
     
     public String getExhibitState() {
-        return "This exhibit will be closed at " + time;
+        return "Closing at " + time;
     }
 }

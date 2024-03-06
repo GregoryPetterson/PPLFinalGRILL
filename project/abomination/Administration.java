@@ -20,7 +20,7 @@ public class Administration {
 
       events = new ArrayList<Event>();
       // The arraylist of event objects.
-      // Each Event object knows wc
+      // Each Event object knows what exhibit it's for.
     }
 
     public void registerObserver(Exhibit o) {

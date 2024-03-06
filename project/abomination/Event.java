@@ -6,8 +6,8 @@ import java.time.LocalTime;
 import java.util.ArrayList;
 
 public class Event {
+    Exhibit exhibit;
     ArrayList<EnumDecorator> decorators;
-    EnumExhibit exhibit;
     LocalTime time;
 
     public Event(Exhibit exhibit, ArrayList<EnumDecorator> decorators, LocalTime time) {
@@ -19,7 +19,7 @@ public class Event {
         return decorators;
     }
 
-    public ArrayList<EnumDecorator> getExhibit(){
-        return decorators;
+    public Exhibit getExhibit(){
+        return exhibit;
     }
 }
