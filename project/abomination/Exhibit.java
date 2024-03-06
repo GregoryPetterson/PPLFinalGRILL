@@ -3,7 +3,7 @@ package project.abomination;
 public abstract class Exhibit {
     String description = "Unknown Exhibit";
 
-    public String getExhibitState() {
+    public String getDescription() {
         return description;
     }
 

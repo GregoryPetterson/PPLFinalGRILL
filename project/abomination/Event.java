@@ -1,6 +1,6 @@
 package project.abomination;
 
-import project.abomination.Administration.EnumDecorator;
+import project.abomination.Scheduler.EnumDecorator;
 import java.time.LocalTime;
 
 public class Event {

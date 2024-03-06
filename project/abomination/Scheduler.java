@@ -2,13 +2,13 @@ package project.abomination;
 
 import java.util.*;
 
-public class Administration {
+public class Scheduler {
 
     protected FactoryDecorator factory;
     private ArrayList<Event> events;
     public enum EnumDecorator {FEEDING, OPEN, PETTING, CLOSED}
 
-    public Administration(){
+    public Scheduler(ArrayList<Event> events){
       Lion.getInstance();
       Tiger.getInstance();
       Bear.getInstance();
@@ -18,7 +18,7 @@ public class Administration {
       // of adding other factory types.
       this.factory = new FactoryDecorator();
 
-      events = new ArrayList<Event>();
+      this.events = events;
       // The arraylist of event objects.
       // Each Event object knows what exhibit it's for.
     }

@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Zoo",
+            "request": "launch",
+            "mainClass": "project.abomination.Zoo",
+            "projectName": "PPLFinalGRILL_c221dd22"
+        },
+        {
+            "type": "java",
             "name": "StarbuzzCoffee",
             "request": "launch",
             "mainClass": "headfirst.designpatterns.decorator.starbuzzWithSizesUpdated.StarbuzzCoffee",

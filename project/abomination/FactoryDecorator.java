@@ -2,7 +2,7 @@ package project.abomination;
 
 import java.util.ArrayList;
 import java.time.LocalTime;
-import project.abomination.Administration.EnumDecorator;
+import project.abomination.Scheduler.EnumDecorator;
 
 public class FactoryDecorator {
 
