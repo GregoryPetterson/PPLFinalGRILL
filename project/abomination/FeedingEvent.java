@@ -7,7 +7,7 @@ public class FeedingEvent extends ExhibitDecorator {
         this.time = time;
     }
 
-    public String getExhibitState() {
+    public String getDescription() {
         return "There will be a feeding at" + time;
     }
 }

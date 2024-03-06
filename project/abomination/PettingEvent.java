@@ -8,7 +8,7 @@ public class PettingEvent extends ExhibitDecorator {
         this.time = time;
     }
 
-    public String getExhibitState() {
+    public String getDescription() {
         return "Petting Event at " + time;
     }
     

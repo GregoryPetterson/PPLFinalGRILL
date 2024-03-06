@@ -13,14 +13,14 @@ public class Zoo {
         lionEvents.add(new Event(lion, EnumDecorator.FEEDING, LocalTime.of(12, 0)));
         lionEvents.add(new Event(lion, EnumDecorator.PETTING, LocalTime.of(14, 0)));
 
-        new Scheduler(lionEvents);
+        new Scheduler(lionEvents).notifyFactory();
 
         ArrayList<Event> tigerEvents = new ArrayList<Event>(); 
         Exhibit tiger = Tiger.getInstance(); 
         tigerEvents.add(new Event(tiger, EnumDecorator.PETTING, LocalTime.of(11, 0)));
         tigerEvents.add(new Event(tiger, EnumDecorator.CLOSED, LocalTime.of(15, 0)));
 
-        new Scheduler(tigerEvents);
+        new Scheduler(tigerEvents).notifyFactory();
         
         ArrayList<Event> bearEvents = new ArrayList<Event>();
         Exhibit bear = Bear.getInstance(); 
@@ -28,7 +28,8 @@ public class Zoo {
         bearEvents.add(new Event(bear, EnumDecorator.FEEDING, LocalTime.of(16, 0)));
         bearEvents.add(new Event(bear, EnumDecorator.CLOSED, LocalTime.of(18, 0)));
 
-        new Scheduler(bearEvents);
+        new Scheduler(bearEvents).notifyFactory();
+        
 
         System.out.println(lion.getDescription());
 

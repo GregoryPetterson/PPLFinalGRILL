@@ -7,7 +7,7 @@ public class ClosedEvent extends ExhibitDecorator {
         this.time = time;
     }
     
-    public String getExhibitState() {
+    public String getDescription() {
         return "Closing at " + time;
     }
 }

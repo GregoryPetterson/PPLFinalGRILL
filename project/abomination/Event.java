@@ -9,6 +9,7 @@ public class Event {
     LocalTime time;
 
     public Event(Exhibit exhibit, EnumDecorator decorator, LocalTime time) {
+        this.exhibit = exhibit;
         this.decorator = decorator;
         this.time = time;
     }
