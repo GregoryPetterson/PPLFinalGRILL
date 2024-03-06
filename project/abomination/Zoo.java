@@ -6,9 +6,12 @@ import java.time.LocalTime;
 
 public class Zoo {
     public static void main(String[] args) {
-
+        // For each exhibit, we need to set the events their corresponding times.
         Exhibit lion = Lion.getInstance();
+        // lion is a singleton.
         ArrayList<TimeAndDecorator> lionEventTimes = new ArrayList<TimeAndDecorator>();
+        // Each exhibit has one events object. Within that object is an arraylist of TimeAndDecorator objects.
+        // Each TimeAndDecorator object has a decorator (event) and its corresponding time.
         lionEventTimes.add(new TimeAndDecorator(EnumDecorator.OPEN, LocalTime.of(9, 0)));
         lionEventTimes.add(new TimeAndDecorator(EnumDecorator.FEEDING, LocalTime.of(12, 0)));
         lionEventTimes.add(new TimeAndDecorator(EnumDecorator.PETTING, LocalTime.of(14, 0)));

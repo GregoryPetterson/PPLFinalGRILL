@@ -1,7 +1,5 @@
 package project.abomination;
 
-import java.util.*;
-
 public class Scheduler {
 
     protected FactoryDecorator factory;
