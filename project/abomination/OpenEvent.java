@@ -9,6 +9,6 @@ public class OpenEvent extends ExhibitDecorator {
     }
 
     public String getDescription() {
-        return exhibit.getDescription() + "Opens at " + time;
+        return exhibit.getDescription() + "Opens at " + time + "\n";
     }
 }

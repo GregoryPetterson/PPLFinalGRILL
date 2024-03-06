@@ -29,6 +29,8 @@ public class Zoo {
         ArrayList<EventTime> bearEventTimes = new ArrayList<EventTime>();
         bearEventTimes.add(new EventTime(EnumDecorator.FEEDING, LocalTime.of(10, 0)));
         bearEventTimes.add(new EventTime(EnumDecorator.PETTING, LocalTime.of(16, 0)));
+        bearEventTimes.add(new EventTime(EnumDecorator.FEEDING, LocalTime.of(15, 0)));
+        bearEventTimes.add(new EventTime(EnumDecorator.PETTING, LocalTime.of(17, 0)));
 
         Events bearEvents = new Events(bear, bearEventTimes);
 
