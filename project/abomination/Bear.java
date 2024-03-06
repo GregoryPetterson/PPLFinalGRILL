@@ -4,7 +4,7 @@ public class Bear extends Exhibit {
     private static final Bear BEAR = new Bear();
     
     private Bear() {
-        description = "Bear";
+        description = "********************Bear Exhibit Schedule******************";
         
     }
 

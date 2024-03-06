@@ -4,7 +4,7 @@ public class Lion extends Exhibit {
     private static final Lion LION = new Lion();
     
     private Lion() {
-        description = "Lion";
+        description = "********************Lion Exhibit Schedule******************";
         
     }
 
