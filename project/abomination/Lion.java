@@ -1,4 +1,4 @@
-package Final.ObserverDecoratorFactoryAbomination;
+package project.abomination;
 
 public class Lion extends Exhibit {
     

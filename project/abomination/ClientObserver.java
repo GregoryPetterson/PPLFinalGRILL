@@ -1,4 +1,4 @@
-package Final.ObserverDecoratorFactoryAbomination;
+package project.abomination;
 
 import java.util.ArrayList;
 
