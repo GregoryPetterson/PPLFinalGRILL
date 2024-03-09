@@ -20,6 +20,5 @@ public class TimeAndDecorator {
     public LocalTime getTime(){
         return time;
     }
-
     
 }

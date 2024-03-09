@@ -28,7 +28,12 @@ public class Zoo {
         tigerEventTimes.add(new TimeAndDecorator(EnumDecorator.FEEDING, LocalTime.of(13, 0)));
         tigerEventTimes.add(new TimeAndDecorator(EnumDecorator.PETTING, LocalTime.of(15, 0)));
         tigerEventTimes.add(new TimeAndDecorator(EnumDecorator.TRAINING, LocalTime.of(16, 30)));
-        tigerEventTimes.add(new TimeAndDecorator(EnumDecorator.CLOSED, LocalTime.of(18, 0)));
+    
+        // When we create a variable to hold the object we're adding,
+        // we can then reference it later to remove it.
+        TimeAndDecorator closingTime = null;
+        tigerEventTimes.add(closingTime = new TimeAndDecorator(EnumDecorator.CLOSED, LocalTime.of(18, 0)));
+        tigerEventTimes.remove(closingTime);
 
         Events tigerEvents = new Events(tiger, tigerEventTimes);
 
