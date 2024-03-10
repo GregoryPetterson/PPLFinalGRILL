@@ -1,12 +1,42 @@
+Overview: 
 The Magical Zoo of Oz has three exhibits. Lions and tigers and bears, oh my!
+Administration is always changing the schedule of each exhibit and adding events. 
+The schedule will be updated accordingly. Each time this happens the exhibit 
+either has a decorator added. Administration may want to try new events so 
+creating a new event has to be easy. In the future, we could pass time into the 
+constructor of each Exhibit event.
 
-Administration is always changing the schedule of each exhibit
-and adding or removing events.The schedule will be updated accordingly. Each time this happens the 
-Exhibit either has a decorator added or removed.
-Administration may want to try  new events so creating a new event has to be easy.
+Design Patterns:
+Singleton - we use this to ensure that there is only one object for each exhibit. 
+This is good because it reflects the real world. There is no chance that we would 
+accidentally make different lion exhibit objects with different schedules. However, 
+it has the downside that we cannot create a new object with a decorator removed. 
+Since each exhibit is a singleton, more kinds of exhibits can be added. What we would 
+have trouble adding is another exhibit of the same kind if, say, we added another 
+lion exhibit to the zoo that shared functionality with the first but needed to be 
+a unique object. 
 
-If we have time, we should pass time into the constructor of each
-Exhibit event. If we're sadists we could implement a sort of the linked list
-based on time.
+Factory - we use this so that we can encapsulate the exhibit decoration. The factory
+could easily be extended to incorporate more decorators. You would just need to add
+if statements to FactoryDecorator.  
 
-Each decorator should have a get description.
+Decorator - we use this in the factory to add events and event times to event
+objects. The event and event time data is sent over by the scheduler. More decorators 
+can easily be added. You would just need to create the class, add them to the ENUM in 
+scheduler and create a corresponding if statement in FactoryDecorator. 
+
+Observer - we probably do not need this pattern given our current program because 
+we only have one observer (the FactoryDecorator which is closest to a client observer).
+But in the future, we could add other kinds of observers who decorate the exhibit 
+objects in different ways based on their roles. For example, a worker might want to know
+that it has been a week since the lion exhibit was closed but the customer would not. 
+
+Interesting feature: 
+FactoryDecorator - this combination allows us to create new decorated objects based on 
+data we're receiving from the scheduler. After getting feedback, we realize this feature 
+may render the singleton pointless as we're just creating new decorated objects which 
+may have contradictory data (the whole point of our using singleton was that it 
+disallowed us from doing this). 
+
+Running instructions: 
+Go to our main method in zoo.java to run our examples/tests.

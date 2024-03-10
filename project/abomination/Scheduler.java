@@ -21,7 +21,7 @@ public class Scheduler {
       // Each Event object knows what exhibit it's for.
     }
 
-    public  Exhibit notifyFactory() {
+    public Exhibit notifyFactory() {
 		return factory.exhibitFactoryDecorator(events);
 	}
 
